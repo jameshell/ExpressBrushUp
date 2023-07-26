@@ -1,5 +1,4 @@
 ﻿import express from 'express';
-const usersRouter = express.Router();
 import { UserService } from "../services/user.service.js";
 import { validatorHandler } from "../middlewares/validator.handler.js";
 import { 
@@ -9,7 +8,7 @@ import {
 
 const { updateUserSchema, createUserSchema, getUserSchema } = require('./../schemas/user.schema');
 
-const router = express.Router();
+const usersRouter = express.Router();
 const service = new UserService();
 
 usersRouter.get('/', async (req, res, next) => {
