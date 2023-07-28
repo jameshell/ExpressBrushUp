@@ -70,4 +70,4 @@ class ProductService {
     }
 }
 
-export {ProductService};
+export { ProductService };
