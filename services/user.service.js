@@ -1,4 +1,5 @@
 ﻿import boom from '@hapi/boom';
+import { getConnection } from "../libs/postgres.js";
 
 class UserService {
 
@@ -10,7 +11,9 @@ class UserService {
     }
 
     async find() {
-        return [];
+        const client = await getConnection();
+        const res = await client.query('SELECT * FROM tasks');
+        return res.rows;
     }
 
     async findOne(id) {

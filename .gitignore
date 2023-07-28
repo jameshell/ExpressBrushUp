@@ -1,6 +1,9 @@
 ﻿# Created by https://www.toptal.com/developers/gitignore/api/windows,rider,linux,macos,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,rider,linux,macos,node
 
+#
+postgres_data
+
 ### Linux ###
 *~
 

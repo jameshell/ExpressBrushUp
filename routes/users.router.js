@@ -6,8 +6,6 @@ import {
     createUserSchema,
     getUserSchema } from "../schemas/user.schema.js";
 
-const { updateUserSchema, createUserSchema, getUserSchema } = require('./../schemas/user.schema');
-
 const usersRouter = express.Router();
 const service = new UserService();
 

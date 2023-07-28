@@ -2,7 +2,7 @@
 
 const ordersRouter = express.Router();
 
-ordersRouter().get('/', (req, res) => {
+ordersRouter.get('/', (req, res) => {
     res.json([]);
 });
 
