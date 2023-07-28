@@ -39,5 +39,5 @@ const options = {
 app.use(cors(options));
 
 app.listen(port, () => {
-    console.log('Mi port '+port);
+    console.log('Se ejecuta la app sobre el puerto: '+port);
 });
