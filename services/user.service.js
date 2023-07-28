@@ -7,7 +7,7 @@ class UserService {
     }
 
     async create(data) {
-        return await sequelizeClient.models.User.create();
+        return sequelizeClient.models.User.create(data);
     }
 
     async find() {
