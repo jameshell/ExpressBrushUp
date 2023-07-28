@@ -1,10 +1,11 @@
 ﻿import Pg from 'pg';
-const pool= new Pg.Pool({
-    host: 'localhost',
-    post: 5432,
-    user: 'nico',
-    password: 'admin123',
-    database: 'my_store'
-});
+import { configObj } from "../config/config.js";
+
+const USER = encodeURIComponent(configObj.dbUser);
+const PASSWORD = encodeURIComponent(configObj.dbPassword);
+const URI = `postgres://${USER}:${PASSWORD}@${configObj.dbHost}:${configObj.dbPort}/${configObj.dbName}`;
+
+
+const pool= new Pg.Pool({ connectionString: URI});
 
 export { pool };
